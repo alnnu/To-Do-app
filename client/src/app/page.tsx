@@ -100,7 +100,7 @@ export default function Home() {
   return (
   <div className='bg-[#97b5fe] h-screen w-screen flex justify-center py-6'>
     {!userLogged ? <ConnectWalletButton connect={connectWallet}/> :
-        userLogged ? <TodoList/> : <WrongNetworkMessage/>}
+        CorrectNetwork ? <TodoList input={input} addTask={addTask} setInput={setInput}/> : <WrongNetworkMessage/>}
   </div>
 );
 }
